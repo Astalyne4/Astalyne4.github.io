@@ -1,0 +1,5 @@
+# Cloudflare Pages / Netlify: serve the key as plain text, no caching surprises.
+/.well-known/appspecific/com.tesla.3p.public-key.pem
+  Content-Type: application/x-pem-file
+  Cache-Control: no-cache
+  Access-Control-Allow-Origin: *

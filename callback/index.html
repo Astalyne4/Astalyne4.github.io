@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer"><title>Tesla OAuth callback</title></head>
+<body style="font-family:system-ui;max-width:40em;margin:3em auto">
+<h1>Tesla authorization received</h1>
+<p>Copy the code below and paste it back to your assistant. It is single-use and expires within minutes.
+Nothing is sent anywhere by this page (no scripts load from other sites).</p>
+<p><b>code:</b></p><textarea id="c" rows="4" style="width:100%" readonly></textarea>
+<p><b>state:</b> <code id="s"></code></p>
+<p id="e" style="color:#b00"></p>
+<script>
+var p=new URLSearchParams(location.search);
+document.getElementById('c').value=p.get('code')||'(no code in URL)';
+document.getElementById('s').textContent=p.get('state')||'';
+if(p.get('error')){document.getElementById('e').textContent='Error: '+p.get('error')+' '+(p.get('error_description')||'');}
+// Remove the code from the address bar/history after displaying it.
+history.replaceState(null,'',location.pathname);
+</script></body></html>

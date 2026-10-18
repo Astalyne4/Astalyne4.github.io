@@ -1,0 +1,2 @@
+# GitHub Pages: make sure Jekyll (if it ever runs) keeps the dot-folder.
+include: [".well-known"]
